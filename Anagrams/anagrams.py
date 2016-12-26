@@ -1,3 +1,5 @@
+import itertools
+
 def get_anagrams(word):
     if len(word) <= 1:
         return word
@@ -8,4 +10,7 @@ def get_anagrams(word):
                 result.append(anagram[:i] + word[0:1] + anagram[i:])
         return result
 
-print (get_anagrams("biro"))
+
+if __name__ == "__main__":
+    print (get_anagrams("biro"))
+    print([''.join(perm) for perm in itertools.permutations("biro")]) # realisation using itertools

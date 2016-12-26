@@ -16,6 +16,6 @@ def check_balance(characters, string):
     else:
         return True
 
-
-characters = {'{': '}', '[': ']', '(': ')'}
-print(check_balance(characters, "{(){}}[[{}]]"))
+if __name__ == "__main__":
+    characters = {'{': '}', '[': ']', '(': ')'}
+    print(check_balance(characters, "{(){}}[[{}]]"))
